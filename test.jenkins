@@ -12,7 +12,7 @@ pipeline {
 					steps{
 					sh'''
 					com= ${env.GIT_COMMIT}
-					sha=echo ${com:0:6 }
+					echo ${com}
 					
 					echo ${sha}
 					export sha
