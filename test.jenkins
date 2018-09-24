@@ -1,4 +1,4 @@
-pipeline {
+opipeline {
 		agent any
 		stages{
 		    
@@ -11,8 +11,8 @@ pipeline {
 				stage('Commmit Code'){
 					steps{
 					sh'''
-					com= ${env.GIT_COMMIT}
-					echo ${com}
+					com=echo ${env.GIT_COMMIT}
+					
 					
 					echo ${sha}
 					export sha
