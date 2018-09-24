@@ -5,15 +5,17 @@ pipeline {
 			stage('Git Check-out'){
 				steps{
 				git 'https://github.com/thockin/test.git'
-				sh"git rev-parse --short HEAD"
+				sh"sha=$(git rev-parse --short HEAD)"
+				
 				}
 			}
 				stage('Commmit Code'){
 					steps{
 					sh'''
 					set +x
-					echo ${env.GIT_COMMIT}'''
-					sh"echo ${sha}"
+					echo "${env.GIT_COMMIT:0:6}"
+					'''
+					
 					
 					sh"echo ${env.BRANCH_NAME}"
 					}
