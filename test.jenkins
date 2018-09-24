@@ -12,7 +12,8 @@ pipeline {
 				stage('Commmit Code'){
 					steps{
 					   script {
-					   	GIT_COMMIT_HASH = sh (script: "git rev-parse --short HEAD", returnStdout: true)
+					   	GIT_COMMIT_HASH1 = sh (script: "git rev-parse --short HEAD", returnStdout: true)
+						GIT_COMMIT_HASH12 = sh (script: "echo ${env.GIT_COMMIT}|cut -c1-6", returnStdout: true)
 					}
 										
 					sh"echo ${GIT_COMMIT_HASH}"
