@@ -16,7 +16,8 @@ pipeline {
 						GIT_COMMIT_HASH12 = sh (script: "echo ${env.GIT_COMMIT}|cut -c1-6", returnStdout: true)
 					}
 										
-					sh"echo ${GIT_COMMIT_HASH}"
+					sh"echo ${GIT_COMMIT_HASH1}"
+					sh"echo ${GIT_COMMIT_HASH2}"
 					}
 				}
 			}
