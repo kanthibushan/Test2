@@ -11,9 +11,10 @@ pipeline {
 				stage('Commmit Code'){
 					steps{
 					sh'''
-					sha=echo ${env.GIT_COMMIT}
-					sha=echo ${env.GIT_COMMIT:0:6 }echo ${sha}
-					echo ${sha}
+					com=echo ${env.GIT_COMMIT}
+					sha=echo ${com:0:6 }
+					sha1=echo ${env.GIT_COMMIT:0:6 }
+					echo ${sha1}
 					export sha
 					'''
 					sh"echo ${env.GIT_COMMIT}"
