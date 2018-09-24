@@ -10,7 +10,9 @@ pipeline {
 			}
 				stage('Commmit Code'){
 					steps{
-					sh"echo ${env.GIT_COMMIT:0:6}"
+					sh'''
+					set +x
+					echo ${env.GIT_COMMIT}'''
 					sh"echo ${sha}"
 					
 					sh"echo ${env.BRANCH_NAME}"
