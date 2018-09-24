@@ -5,7 +5,7 @@ pipeline {
 			stage('Git Check-out'){
 				steps{
 				git 'https://github.com/thockin/test.git'
-				sh"sha=$(git rev-parse --short HEAD)"
+				sh"git rev-parse --short HEAD"
 				
 				}
 			}
