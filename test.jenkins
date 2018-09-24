@@ -15,7 +15,7 @@ pipeline {
 					   	GIT_COMMIT_HASH = sh (script: "git rev-parse --short HEAD", returnStdout: true)
 					}
 										
-					sh"echo ${env.GIT_COMMIT_HASH}"
+					sh"echo ${GIT_COMMIT_HASH}"
 					}
 				}
 			}
