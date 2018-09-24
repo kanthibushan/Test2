@@ -13,7 +13,7 @@ pipeline {
 					sh'''
 					com= ${env.GIT_COMMIT}
 					sha=echo ${com:0:6 }
-					echo ${env.GIT_COMMIT:0:6 }
+					
 					echo ${sha}
 					export sha
 					'''
