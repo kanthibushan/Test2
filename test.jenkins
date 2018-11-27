@@ -18,7 +18,7 @@ pipeline {
 										
 					sh"echo ${GIT_COMMIT_HASH1}"
 					sh"echo ${GIT_COMMIT_HASH2}"
-					sh"GIT_COMMIT_HASH2 =echo ${GIT_COMMIT_HASH2}-hotfix"
+					GIT_COMMIT_HASH2 = ${GIT_COMMIT_HASH2}-hotfix
 					sh"echo ${GIT_COMMIT_HASH2}"
 					}
 				}
