@@ -18,8 +18,8 @@ pipeline {
 					}
 										
 					sh "echo ${GIT_COMMIT_HASH1}"
-					sh "buildnumber=${GIT_COMMIT_HASH1}"
-					sh"${buildnumber}"
+					sh "echo ${GIT_COMMIT_HASH2}"
+					sh"echo ${buildnumber}"
 					
 					}
 				}
