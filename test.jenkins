@@ -8,7 +8,7 @@ pipeline {
 					   	hotfix="hotfix"
 					   	GIT_COMMIT_HASH1 = sh (script: "git rev-parse --short HEAD", returnStdout: true)
 						GIT_COMMIT_HASH2 = sh (script: "echo ${env.GIT_COMMIT}|cut -c1-6", returnStdout: true)
-						BUILD_NUMBER = "${GIT_COMMIT_HASH2}.hotfix"
+						BUILD_NUMBER = "${GIT_COMMIT_HASH2}hotfix"
 												
 					}
 										
